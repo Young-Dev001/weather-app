@@ -1,7 +1,3 @@
-/**
- * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
- */
-
 import type { Config } from "tailwindcss"
 const { fontFamily } = require("tailwindcss/defaultTheme")
 
@@ -12,12 +8,8 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-    "./public/**/*.html",
 	],
   prefix: "",
-  plugins: [
-    require("flowbite/plugin")
-  ],
   theme: {
     container: {
       center: true,

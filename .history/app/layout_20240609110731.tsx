@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter as FontSans } from "next/font/google";
+import { Inter as FontSans, Inter } from "next/font/google"
 import { ThemeProvider } from "@/providers/theme-provider";
 
-// Assign the font loader to a constant
-const inter = FontSans({
+// const inter = Inter({ subsets: ["latin"] });
+
+const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-});
+})
+
 
 export const metadata: Metadata = {
   title: "Weather App",
@@ -21,14 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={Inter.className}>
         <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
+        attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        {children}
         </ThemeProvider>
       </body>
     </html>

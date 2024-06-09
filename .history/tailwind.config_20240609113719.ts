@@ -1,7 +1,3 @@
-/**
- * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
- */
-
 import type { Config } from "tailwindcss"
 const { fontFamily } = require("tailwindcss/defaultTheme")
 

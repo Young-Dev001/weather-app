@@ -1,9 +1,4 @@
-/**
- * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
- */
-
 import type { Config } from "tailwindcss"
-const { fontFamily } = require("tailwindcss/defaultTheme")
 
 const config = {
   darkMode: ["class"],
@@ -12,12 +7,8 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-    "./public/**/*.html",
 	],
   prefix: "",
-  plugins: [
-    require("flowbite/plugin")
-  ],
   theme: {
     container: {
       center: true,
@@ -27,9 +18,6 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

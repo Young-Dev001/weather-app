@@ -49,7 +49,15 @@
       --ring: 240 4.9% 83.9%;
     }
   }
-
+  /* Define custom styles for the body */
+.custom-body {
+  /* Example styles */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
   @layer base {
     * {
